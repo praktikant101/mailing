@@ -1,0 +1,73 @@
+MNC_COUNTRY_DIGITS = {
+    # CIS
+    "Armenia": 3,
+    "Azerbaijan": 3,
+    "Belarus": 3,
+    "Kazakhstan": 3,
+    "Kyrgyzstan": 3,
+    "Moldova": 3,
+    "Russia": 3,
+    "Tajikistan": 3,
+    "Ukraine": 3,
+    "Uzbekistan": 2,
+    # Europe
+    "Germany": 2,
+    "France": 2,
+    "UK": 2,
+    "Italy": 2,
+    "Spain": 2,
+    "Poland": 2,
+    "Latvia": 2,
+    "Lithuania": 2,
+    "Estonia": 2,
+    "Greece": 2,
+    "Turkey": 2,
+    "Georgia": 2,
+    # Asia
+    "China": 2,
+    "Japan": 2,
+    "Vietnam": 2,
+    "India": 2,
+    "Indonesia": 2,
+    "Pakistan": 2,
+}
+
+SPECIAL_CASES = {
+    "7": "Russia",
+    "79": "Russia",
+    "998": "Uzbekistan",
+    "86": "China",
+}
+
+
+MNC_COUNTRY_CODES = {
+
+    "374": "Armenia",
+    "994": "Azerbaijan",
+    "375": "Belarus",
+    "7": "Kazakhstan",
+    "996": "Kyrgyzstan",
+    "373": "Moldova",
+    "79": "Russia",
+    "992": "Tajikistan",
+    "380": "Ukraine",
+    "998": "Uzbekistan",
+    "49": "Germany",
+    "33": "France",
+    "44": "UK",
+    "39": "Italy",
+    "34": "Spain",
+    "48": "Poland",
+    "371": "Latvia",
+    "370": "Lithuania",
+    "372": "Estonia",
+    "30": "Greece",
+    "90": "Turkey",
+    "995": "Georgia",
+    "86": "China",
+    "81": "Japan",
+    "84": "Vietnam",
+    "91": "India",
+    "62": "Indonesia",
+    "92": "Pakistan",
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "phone_number": "+998 90 123-45-67",
+    "operator_code": "90",
+    "tag": "feature",
+    "tz": "UTC"
+  },
+  {
+    "phone_number": "+998900234567",
+    "operator_code": "90",
+    "tag": "hello",
+    "tz": "UTC"
+  },
+  {
+    "phone_number": "+77002345679",
+    "operator_code": "701",
+    "tag": "hello",
+    "tz": "UTC"
+  }
+]

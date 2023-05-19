@@ -1,0 +1,2 @@
+class ProcessDataError(BaseException):
+    pass
