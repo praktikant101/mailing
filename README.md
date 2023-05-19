@@ -23,7 +23,7 @@ You can set 'DB_ENGINE="django.db.backends.postgresql_psycopg2"' and make sure y
 
 ### Emailing (Optional)
 
-If you to send statistics on SMS sent-outs done in the last 24 hours on a daily basis, in the .env file
+If want you to send statistics on SMS sent-outs done in the last 24 hours on a daily basis to a certain email address, in the .env file
 set EMAIL_RECEIVER with the email address of the recipient.
 
 The mailing is executed via the SMTP server daily at 00:00 UTC. By default, the project is organized to use Gmail
@@ -31,10 +31,10 @@ as a default email host that can be configured [here](https://www.gmass.co/blog/
 
 In addition, you will need to set the below-mentioned following parameters as per [here](https://bshoo.medium.com/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e), after you have configured the SMTP server:
 
-EMAIL_HOST=
-EMAIL_PORT=
-EMAIL_HOST_USER=
-EMAIL_HOST_PASSWORD=
+EMAIL_HOST=\
+EMAIL_PORT=\
+EMAIL_HOST_USER=\
+EMAIL_HOST_PASSWORD=\
 EMAIL_USE_TLS=
 
 
