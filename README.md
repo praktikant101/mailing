@@ -19,7 +19,7 @@ git clone https://gitlab.com/praktikant101/mailing.git
 
 Once cloned, in the root directory of the project, where files like "docker-compose", "Dockerfile" are located, create a .env file as per .env_example and fill in environment parameters.
 
-You can set 'DB_ENGINE="django.db.backends.postgresql_psycopg2"' and make sure you to insert TOKEN that will be in mailing via [API](https://probe.fbrq.cloud/docs).
+You can set 'DB_ENGINE="django.db.backends.postgresql_psycopg2"' and make sure you to insert TOKEN that will be in mailing via this [API](https://probe.fbrq.cloud/docs).
 
 ### Emailing (Optional)
 
@@ -63,7 +63,7 @@ If you are asked between destroying existing test database, print "yes" and proc
 Testing for the **Mailing** model triggers the .create() method of the relevant serializer that initiates sent-out of messages. Thus, by this test we at the same time ensure testing for messages' creation, SMS sent-outs and recording statistics. 
 
 
-## Optional
+### Population database with initial dummy data using custom commands (Optional)
 
 You will get a list of docker containers. Select the CONTAINER_ID corresponding to **fr-web** under CONTAINER_NAME and run the following commands:
 
