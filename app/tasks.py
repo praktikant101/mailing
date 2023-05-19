@@ -39,12 +39,13 @@ def update_messages_stats(task_id, mailing_id):
 @shared_task
 def send_mailing_stats():
     twenty_four_hours_ago = datetime.now() - timedelta(hours=24)
-    mailings = MailingStats.objects.filter(mailing__created_at__gte=twenty_four_hours_ago)
 
-    email_address = config("EMAIL")
+    email_address = config("EMAIL_RECEIVER")
 
     if not email_address:
         return None
+
+    mailings = MailingStats.objects.filter(mailing__created_at__gte=twenty_four_hours_ago)
 
     if not mailings:
         return None
@@ -52,14 +53,17 @@ def send_mailing_stats():
     email_body = "Stats:\n\n"
 
     for mail in mailings:
-        mail_url = f"http://0.0.0.0:8000/stats/{mail.id}"
-        mail_text = f"Mail ID: {mail.id}\n"
-        email_body += mail_text + mail_url + "\n\n"
+        mail_text = f"Mail ID: {mail.id}\n" \
+                    f"Number of messages: {mail.no_messages}\n" \
+                    f"Number of messages sent successfully: {mail.no_messages_ok}\n" \
+                    f"Number of messages failed: {mail.no_messages_fail}\n" \
+                    f"Sent at: {mail.mailing.sent_at}\n"
+        email_body += mail_text + "\n\n"
 
     send_mail("Mailings stats",
               email_body,
               "admin@localhost",
-              [email_address],
+              [email_address, ],
               fail_silently=False)
 
 

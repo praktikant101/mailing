@@ -7,6 +7,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'main.settings')
 app = Celery('main')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
+app.conf.enable_utc = True
+
 app.conf.beat_schedule = {
     'send_mailing_stats': {
         'task': 'app.tasks.send_mailing_stats',

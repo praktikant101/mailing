@@ -29,7 +29,7 @@ services:
 
   tasks:
     build: .
-    command: "celery -A main.celery.app worker --loglevel=debug"
+    command: "celery -A main.celery.app worker -B --loglevel=debug"
     volumes:
       - .:/code
     environment:

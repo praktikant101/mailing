@@ -15,7 +15,7 @@ def collect_stats(data, mailing):
             count_fail += 1
 
     stat.no_messages_ok = count_ok
-    stat.no_message_fail = count_fail
+    stat.no_messages_fail = count_fail
     stat.no_messages = len(data)
 
     stat.save()

@@ -43,5 +43,5 @@ class MailingStats(models.Model):
     mailing = models.ForeignKey(Mailing, on_delete=models.CASCADE, related_name='stats')
     no_messages = models.IntegerField(default=0)
     no_messages_ok = models.IntegerField(default=0)
-    no_message_fail = models.IntegerField(default=0)
+    no_messages_fail = models.IntegerField(default=0)
     completed = models.BooleanField(default=False)
