@@ -21,6 +21,9 @@ Once cloned, in the root directory of the project, where files like "docker-comp
 
 You can set 'DB_ENGINE="django.db.backends.postgresql_psycopg2"' and make sure you to insert TOKEN that will be in mailing via [API](https://probe.fbrq.cloud/docs).
 
+If you want to receive daily messages with stats on mailings executed in the last 24 hours,
+you can set the EMAIL parameter in tge .env file. 
+
 To build the project, in the root directory of the application, run:
 
 ```bash
@@ -63,3 +66,4 @@ Once initial data is set up, you can check views.
 SMS messages are (asynchronously) sent as soon as a new mailing is created. Clients with same operator code and/or tags,mentioned in the mailing,
 are selected as receivers. If you don't mention any additional parameters other than the text body and launch date ("created_at" field),
 all clients obtain SMS messages. To see the mailings that have been sent out/relevant stats/messages/clients, you see in http://0.0.0.0:8000. 
+
