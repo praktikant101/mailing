@@ -24,19 +24,19 @@ You can set 'DB_ENGINE="django.db.backends.postgresql_psycopg2"' and make sure y
 ### Emailing (Optional)
 
 If want you to send statistics on SMS sent-outs done in the last 24 hours on a daily basis to a certain email address, in the .env file
-set EMAIL_RECEIVER with the email address of the recipient.
+set the EMAIL_RECEIVER parameter with the email address of the recipient.
 
 The mailing is executed via the SMTP server daily at 00:00 UTC. By default, the project is organized to use Gmail
 as a default email host that can be configured [here](https://www.gmass.co/blog/gmail-smtp/).
 
-In addition, you will need to set the below-mentioned following parameters as per [here](https://bshoo.medium.com/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e), after you have configured the SMTP server:
+In addition, you will need to configure the below-mentioned variables. If you don't know how,
+[here](https://bshoo.medium.com/how-to-send-emails-with-python-django-through-google-smtp-server-for-free-22ea6ea0fb8e) is a tutorial that can guide you.
 
 EMAIL_HOST=\
 EMAIL_PORT=\
 EMAIL_HOST_USER=\
 EMAIL_HOST_PASSWORD=\
 EMAIL_USE_TLS=
-
 
 To build the project, in the root directory of the application, run:
 
@@ -80,4 +80,3 @@ Once initial data is set up, you can check views.
 SMS messages are (asynchronously) sent as soon as a new mailing is created. Clients with same operator code and/or tags,mentioned in the mailing,
 are selected as receivers. If you don't mention any additional parameters other than the text body and launch date ("created_at" field),
 all clients obtain SMS messages. To see the mailings that have been sent out/relevant stats/messages/clients, you see in http://0.0.0.0:8000. 
-
